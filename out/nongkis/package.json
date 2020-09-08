@@ -2,7 +2,7 @@
   "name": "nongkis",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://dev.firmanjabar.my.id/nongkis",
+  "homepage": "./",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

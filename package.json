@@ -1,7 +1,7 @@
 {
   "name": "dev",
   "version": "1.0.0",
-  "homepage": "https://dev.firmanjabar.my.id/nongkis",
+  "homepage": ".",
   "scripts": {
     "build": "",
     "start": "",
