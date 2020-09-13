@@ -1,13 +1,13 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import newsPosts from "../data/news";
-import { withStyles } from "../tools/withStyles";
-import { Link } from "../components/Link";
-import { Main } from "../components/Main";
-import { Post } from "../components/Post";
-import { Secuence } from "../components/Secuence";
-import { Text } from "../components/Text";
+import dataProject from '../data/project';
+import { withStyles } from '../tools/withStyles';
+import { Link } from '../components/Link';
+import { Main } from '../components/Main';
+import { Post } from '../components/Post';
+import { Secuence } from '../components/Secuence';
+import { Text } from '../components/Text';
 
 const styles = (theme) => ({
   root: {},
@@ -32,16 +32,16 @@ class Project extends React.Component {
               <Text>Projects</Text>
             </h1>
           </header>
-          {newsPosts.map((post, index) => (
+          {dataProject.map((post, index) => (
             <Post
               key={index}
               audio={{ silent: index > 4 }}
-              data={{ ...post, id: "post" + index }}
+              data={{ ...post, id: 'post' + index }}
             />
           ))}
           <p className={classes.seeMore}>
-            <Text>See more at</Text>{" "}
-            <Link href="https://github.com/firmanjabar" target="facebook">
+            <Text>See more at</Text>{' '}
+            <Link href='https://github.com/firmanjabar' target='facebook'>
               <Text>github.com/firmanjabar.</Text>
             </Link>
           </p>
