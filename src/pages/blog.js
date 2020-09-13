@@ -1,47 +1,70 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import { withStyles } from "../tools/withStyles";
-import { Main } from "../components/Main";
-import { Secuence } from "../components/Secuence";
-import { Text } from "../components/Text";
-import { Fader } from "../components/Fader";
-import { Link } from "../components/Link";
+import dataBlog from '../data/blog';
+import { withStyles } from '../tools/withStyles';
+import { Main } from '../components/Main';
+import { Secuence } from '../components/Secuence';
+import { Text } from '../components/Text';
+import { Fader } from '../components/Fader';
+import { Link } from '../components/Link';
 
 const styles = (theme) => ({
   root: {},
   albums: {
-    display: "flex",
-    flexDirection: "row",
-    flexWrap: "wrap",
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
   },
   album: {
-    padding: [0, 0, 20],
-    width: "100%",
+    padding: [0, 0, 15],
+    width: '100%',
   },
   albumCover: {
-    display: "block",
+    display: 'block',
     margin: [0, 0, 20],
-    width: "100%",
+    width: '100%',
 
-    "& img": {
+    '& img': {
+      height: 300,
+      objectFit: 'cover',
       margin: 0,
-      width: "100%",
-      maxWidth: "100%",
+      width: '100%',
+      maxWidth: '100%',
+    },
+  },
+  wrapper: {
+    paddingBottom: 8,
+    '&:hover, &:focus': {
+      backgroundColor: '#ffffff10',
     },
   },
   title: {
-    fontWeight: "bold",
-    padding: [10, 8, 0, 8],
+    '& h1': {
+      fontSize: 18,
+      fontWeight: 'bold',
+      padding: [15, 8, 8, 8],
+      margin: 0,
+    },
+  },
+  date: {
+    fontWeight: 'light',
+    fontSize: 12,
+    padding: [2, 8],
   },
   desc: {
-    padding: 8,
+    padding: [8, 8, 0, 8],
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    display: '-webkit-box',
+    '-webkit-line-clamp': 4,
+    '-webkit-box-orient': 'vertical',
   },
 
-  "@media screen and (min-width: 768px)": {
+  '@media screen and (min-width: 768px)': {
     album: {
       padding: 10,
-      width: "50%",
+      width: '50%',
     },
   },
 });
@@ -62,63 +85,24 @@ class Blogs extends React.Component {
           </h1>
           <hr />
           <div className={classes.albums}>
-            <div className={classes.album}>
-              <Fader className={classes.albumCover}>
-                <Link
-                  href="https://fanlink.to/circalgorithm"
-                  target="circalgorithm"
-                >
-                  <img
-                    alt="Soul Extract Circadian Algorithm album cover"
-                    src="/images/circadian-algorithm.jpg"
-                  />
-                  <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Minima consequatur, obcaecati ipsam fuga nobis molestias
-                    dignissimos quaerat voluptatem ipsum distinctio doloremque
-                    error, laudantium numquam qui perferendis eaque id autem
-                    tenetur! Lorem, ipsum dolor sit amet consectetur adipisicing
-                    elit. Ipsam error totam quaerat rem ex odio assumenda, ullam
-                    quas at magni natus accusantium consectetur.
-                  </div>
-                </Link>
-              </Fader>
-            </div>
-            <div className={classes.album}>
-              <Fader className={classes.albumCover}>
-                <Link href="https://fanlink.to/filaments" target="filaments">
-                  <img
-                    alt="Soul Extract Filaments album cover"
-                    src="/images/filaments.jpg"
-                  />
-                  <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Minima consequatur, obcaecati ipsam fuga nobis molestias
-                    dignissimos quaerat voluptatem ipsum distinctio doloremque
-                    error, laudantium numquam qui perferendis eaque id autem
-                    tenetur!
-                  </div>
-                </Link>
-              </Fader>
-            </div>
-            <div className={classes.album}>
-              <Fader className={classes.albumCover}>
-                <Link href="https://fanlink.to/filaments" target="filaments">
-                  <img
-                    alt="Soul Extract Filaments album cover"
-                    src="/images/filaments.jpg"
-                  />
-                  <div className={classes.title}>Title Hamdina</div>
-                  <div className={classes.desc}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Minima consequatur, obcaecati ipsam fuga nobis molestias
-                    dignissimos quaerat voluptatem ipsum distinctio doloremque
-                    error, laudantium numquam qui perferendis eaque id autem
-                    tenetur!
-                  </div>
-                </Link>
-              </Fader>
-            </div>
+            {dataBlog.map((post, index) => (
+              <div key={index} className={classes.album}>
+                <Fader className={classes.albumCover}>
+                  <Link href={post.href}>
+                    <img alt={post.title} src={post.image} />
+                    <div className={classes.wrapper}>
+                      <div className={classes.title}>
+                        <h1>
+                          <Text>{post.title}</Text>
+                        </h1>
+                      </div>
+                      <div className={classes.date}>{post.date}</div>
+                      <div className={classes.desc}>{post.desc}</div>
+                    </div>
+                  </Link>
+                </Fader>
+              </div>
+            ))}
           </div>
         </Secuence>
       </Main>

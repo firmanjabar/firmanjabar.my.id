@@ -7,7 +7,6 @@ import anime from 'animejs';
 import { getViewportRange } from '../../tools/viewport';
 import { Secuence } from '../Secuence';
 import { SocialLinks } from '../SocialLinks';
-import { Legal } from '../Legal';
 
 class Component extends React.PureComponent {
   static displayName = 'Footer';
@@ -19,15 +18,15 @@ class Component extends React.PureComponent {
     audio: PropTypes.object.isRequired,
     sounds: PropTypes.object.isRequired,
     className: PropTypes.any,
-    children: PropTypes.any
+    children: PropTypes.any,
   };
 
-  constructor () {
+  constructor() {
     super(...arguments);
 
     this.state = {
       show: false,
-      shapes: []
+      shapes: [],
     };
 
     const { energy } = this.props;
@@ -36,13 +35,13 @@ class Component extends React.PureComponent {
     energy.updateDuration({ enter: durationEnter });
   }
 
-  componentDidMount () {
+  componentDidMount() {
     this.draw();
 
     window.addEventListener('resize', this.onResize);
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     this.stop();
 
     window.removeEventListener('resize', this.onResize);
@@ -51,9 +50,9 @@ class Component extends React.PureComponent {
   onResize = () => {
     this.draw();
     this.reset();
-  }
+  };
 
-  draw () {
+  draw() {
     const { theme } = this.props;
     const { small } = getViewportRange();
     const width = this.element.offsetWidth;
@@ -66,10 +65,10 @@ class Component extends React.PureComponent {
     const offset = small ? 5 : 20;
     const pit = small ? 5 : 10;
 
-    const x1 = ((width - boxWidth) / 2);
-    const x2 = ((width - boxWidth) / 2) + offset;
-    const x3 = x2 + (boxWidth / 2);
-    const x4 = x2 + boxWidth - (offset * 2);
+    const x1 = (width - boxWidth) / 2;
+    const x2 = (width - boxWidth) / 2 + offset;
+    const x3 = x2 + boxWidth / 2;
+    const x4 = x2 + boxWidth - offset * 2;
     const x5 = x4 + offset;
 
     const backgroundColor = rgba(theme.color.background.dark, theme.color.alpha);
@@ -78,33 +77,33 @@ class Component extends React.PureComponent {
     const ground = {
       d: `M0,0 L${x1},0 L${x2},${pit} L${x4},${pit} L${x5},0 L${width},0 L${width},${height} L0,${height} L0,0`,
       fill: backgroundColor,
-      stroke: backgroundColor
+      stroke: backgroundColor,
     };
     const line1 = {
       d: `M0,0 L${x1},0`,
-      stroke: lineColor
+      stroke: lineColor,
     };
     const slash1 = {
       d: `M${x1},0 L${x2},${pit}`,
       stroke: theme.color.tertiary.main,
-      strokeWidth: 3
+      strokeWidth: 3,
     };
     const line2 = {
       d: `M${x2},${pit} L${x3},${pit}`,
-      stroke: lineColor
+      stroke: lineColor,
     };
     const line3 = {
       d: `M${x4},${pit} L${x3},${pit}`,
-      stroke: lineColor
+      stroke: lineColor,
     };
     const slash2 = {
       d: `M${x5},0 L${x4},${pit}`,
       stroke: theme.color.tertiary.main,
-      strokeWidth: 3
+      strokeWidth: 3,
     };
     const line4 = {
       d: `M${width},0 L${x5},0`,
-      stroke: lineColor
+      stroke: lineColor,
     };
 
     const shapes = [ground, line1, slash1, line2, line3, slash2, line4];
@@ -112,13 +111,13 @@ class Component extends React.PureComponent {
     this.setState({ shapes });
   }
 
-  getDurationEnter () {
+  getDurationEnter() {
     const { theme } = this.props;
     const { small, medium } = getViewportRange();
     return (small || medium ? 2 : 4) * theme.animation.time;
   }
 
-  playSound () {
+  playSound() {
     const { sounds } = this.props;
 
     if (!sounds.deploy.playing()) {
@@ -126,12 +125,12 @@ class Component extends React.PureComponent {
     }
   }
 
-  stopSound () {
+  stopSound() {
     const { sounds } = this.props;
     sounds.deploy.stop();
   }
 
-  enter () {
+  enter() {
     const shapes = Array.from(this.svg.querySelectorAll('path'));
     const [ground, line1, slash1, line2, line3, slash2, line4] = shapes;
     const duration = this.getDurationEnter();
@@ -145,7 +144,7 @@ class Component extends React.PureComponent {
       translateY: ['100%', 0],
       easing: 'easeOutCubic',
       duration,
-      complete: () => this.stopSound()
+      complete: () => this.stopSound(),
     });
 
     anime({
@@ -156,7 +155,7 @@ class Component extends React.PureComponent {
       complete: () => {
         this.draw();
         this.setState({ show: true });
-      }
+      },
     });
 
     const shapesGroup1 = [line1, line4];
@@ -168,7 +167,7 @@ class Component extends React.PureComponent {
       targets: shapesGroup1,
       strokeDashoffset: [anime.setDashoffset, 0],
       easing: 'linear',
-      duration: durationGroup1
+      duration: durationGroup1,
     });
 
     const shapesGroup2 = [slash1, slash2];
@@ -181,7 +180,7 @@ class Component extends React.PureComponent {
       strokeDashoffset: [anime.setDashoffset, 0],
       easing: 'linear',
       delay: durationGroup1,
-      duration: durationGroup2
+      duration: durationGroup2,
     });
 
     const shapesGroup3 = [line2, line3];
@@ -194,11 +193,11 @@ class Component extends React.PureComponent {
       strokeDashoffset: [anime.setDashoffset, 0],
       easing: 'linear',
       delay: durationGroup1,
-      duration: durationGroup3
+      duration: durationGroup3,
     });
   }
 
-  exit () {
+  exit() {
     const { energy, sounds } = this.props;
     const shapes = Array.from(this.svg.querySelectorAll('path'));
     const [ground, line1, slash1, line2, line3, slash2, line4] = shapes;
@@ -213,7 +212,7 @@ class Component extends React.PureComponent {
       opacity: [1, 0],
       easing: 'easeOutCubic',
       duration,
-      complete: () => this.stopSound()
+      complete: () => this.stopSound(),
     });
 
     const shapesGroup1 = [line1, line4];
@@ -225,7 +224,7 @@ class Component extends React.PureComponent {
       strokeDashoffset: [anime.setDashoffset, 0],
       direction: 'reverse',
       easing: 'linear',
-      duration: durationGroup1
+      duration: durationGroup1,
     });
 
     const shapesGroup2 = [slash1, slash2];
@@ -238,7 +237,7 @@ class Component extends React.PureComponent {
       direction: 'reverse',
       easing: 'linear',
       delay: durationGroup1,
-      duration: durationGroup2
+      duration: durationGroup2,
     });
 
     const shapesGroup3 = [line2, line3];
@@ -251,25 +250,25 @@ class Component extends React.PureComponent {
       direction: 'reverse',
       easing: 'linear',
       delay: durationGroup1,
-      duration: durationGroup3
+      duration: durationGroup3,
     });
   }
 
-  stop () {
+  stop() {
     const shapes = this.svg.querySelectorAll('path');
 
     anime.remove(shapes);
     anime.remove(this.element);
   }
 
-  reset () {
+  reset() {
     const { energy } = this.props;
     const show = energy.entering || energy.entered;
     const shapes = Array.from(this.svg.querySelectorAll('path'));
 
     this.setState({ show });
 
-    shapes.forEach(shape => {
+    shapes.forEach((shape) => {
       shape.removeAttribute('style');
       shape.removeAttribute('stroke-dasharray');
       shape.removeAttribute('stroke-dashoffset');
@@ -279,29 +278,16 @@ class Component extends React.PureComponent {
     anime.set(shapes, { opacity: show ? 1 : 0 });
   }
 
-  render () {
-    const {
-      theme,
-      classes,
-      energy,
-      audio,
-      sounds,
-      className,
-      ...etc
-    } = this.props;
+  render() {
+    const { theme, classes, energy, audio, sounds, className, ...etc } = this.props;
     const { show, shapes } = this.state;
 
     return (
-      <footer
-        className={cx(classes.root, className)}
-        ref={ref => (this.element = ref)}
-        {...etc}
-      >
+      <footer className={cx(classes.root, className)} ref={(ref) => (this.element = ref)} {...etc}>
         <svg
           className={classes.svg}
-          ref={ref => (this.svg = ref)}
-          xmlns='http://www.w3.org/2000/svg'
-        >
+          ref={(ref) => (this.svg = ref)}
+          xmlns='http://www.w3.org/2000/svg'>
           {shapes.map((shape, index) => (
             <path
               key={index}
@@ -319,9 +305,6 @@ class Component extends React.PureComponent {
               className={classes.socialLinks}
               itemClassName={classes.socialLinksItem}
               animateY={false}
-            />
-            <Legal
-              className={classes.legal}
             />
           </Secuence>
         </div>
