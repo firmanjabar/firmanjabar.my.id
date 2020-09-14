@@ -29,7 +29,7 @@ const styles = (theme) => ({
     margin: [0, 'auto'],
     padding: [0, 0, 20, 0],
     width: '100%',
-    height: 300,
+    height: 200,
   },
   image: {
     flex: 1,
@@ -60,13 +60,18 @@ const styles = (theme) => ({
     media: {
       padding: [0, 0, 20, 0],
       width: '100%',
-      height: 350,
+      height: 200,
     },
   },
 
   '@media screen and (min-width: 768px)': {
     link: {
       padding: 20,
+    },
+    media: {
+      padding: [0, 0, 20, 0],
+      width: '100%',
+      height: 380,
     },
   },
 });

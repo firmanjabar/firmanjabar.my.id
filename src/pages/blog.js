@@ -13,7 +13,7 @@ const styles = (theme) => ({
   root: {},
   albums: {
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'column',
     flexWrap: 'wrap',
   },
   album: {
@@ -27,15 +27,22 @@ const styles = (theme) => ({
 
     '& img': {
       height: 300,
-      objectFit: 'cover',
+      objectFit: 'contain',
       margin: 0,
       width: '100%',
       maxWidth: '100%',
+      backgroundColor: 'black',
     },
+  },
+  link: {
+    display: 'flex',
+    flexDirection: 'column',
   },
   wrapper: {
     paddingBottom: 8,
+    width: '100%',
     '&:hover, &:focus': {
+      width: '100%',
       backgroundColor: '#ffffff10',
     },
   },
@@ -57,14 +64,43 @@ const styles = (theme) => ({
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     display: '-webkit-box',
-    '-webkit-line-clamp': 4,
+    '-webkit-line-clamp': 5,
     '-webkit-box-orient': 'vertical',
   },
 
   '@media screen and (min-width: 768px)': {
     album: {
       padding: 10,
+      width: '100%',
+    },
+    albumCover: {
+      '& img': {
+        width: '50%',
+      },
+    },
+    link: {
+      display: 'flex',
+      flexDirection: 'row',
+    },
+    wrapper: {
       width: '50%',
+      '&:hover, &:focus': {
+        width: '50%',
+      },
+    },
+    title: {
+      '& h1': {
+        padding: [15, 8, 8, 18],
+      },
+    },
+    date: {
+      fontWeight: 'light',
+      fontSize: 12,
+      padding: [2, 18],
+    },
+    desc: {
+      '-webkit-line-clamp': 9,
+      padding: [8, 8, 0, 18],
     },
   },
 });
@@ -88,7 +124,7 @@ class Blogs extends React.Component {
             {dataBlog.map((post, index) => (
               <div key={index} className={classes.album}>
                 <Fader className={classes.albumCover}>
-                  <Link href={post.href}>
+                  <Link href={post.href} className={classes.link}>
                     <img alt={post.title} src={post.image} />
                     <div className={classes.wrapper}>
                       <div className={classes.title}>
