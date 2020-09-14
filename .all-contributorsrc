@@ -1,6 +1,6 @@
 {
-  "projectName": "soulextract.com",
-  "projectOwner": "soulextract",
+  "projectName": "firmanjabar.my.id",
+  "projectOwner": "firmanjabar",
   "repoType": "github",
   "repoHost": "https://github.com",
   "files": [
@@ -30,7 +30,19 @@
         "design",
         "ideas"
       ]
+    },
+    {
+      "login": "firmanjabar",
+      "name": "Firman Abdul Jabar",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/45032367?v=4",
+      "profile": "https://github.com/firmanjabar",
+      "contributions": [
+        "blog",
+        "content",
+        "code"
+      ]
     }
   ],
-  "contributorsPerLine": 7
+  "contributorsPerLine": 7,
+  "skipCi": true
 }
