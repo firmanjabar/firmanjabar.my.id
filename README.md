@@ -1,24 +1,17 @@
-<img width="150" src="./src/images/favicon.png" alt="Soul Extract">
+# Personal Web
 
-# [SoulExtract.com](https://soulextract.com)
-
-<a href="https://github.com/soulextract/soulextract.com/blob/master/LICENSE">
-  <img src="https://img.shields.io/github/license/soulextract/soulextract.com.svg?maxAge=2592000" alt="license" />
-</a>
-<a href="https://standardjs.com">
-  <img src="https://img.shields.io/badge/code_style-standardjs-cccc44.svg?style=flat-square" alt="code style: standardjs">
+[![Netlify Status](https://api.netlify.com/api/v1/badges/28ce38d4-3e5f-472f-bc0c-b7d4d9f45731/deploy-status)](https://app.netlify.com/sites/firmanjabars/deploys)
+<a href="https://github.com/firmanjabar/firmanjabar.my.id/blob/master/LICENSE">
+<img src="https://img.shields.io/github/license/firmanjabar/firmanjabar.my.id.svg?maxAge=2592000" alt="license" />
 </a>
 <a href="http://gatsbyjs.org">
-  <img src="https://img.shields.io/badge/maintained%20with-gatsby-663399.svg" alt="gatsbyjs" />
+<img src="https://img.shields.io/badge/maintained%20with-gatsby-663399.svg" alt="gatsbyjs" />
 </a>
 <a href="https://arwes.dev">
-  <img src="https://img.shields.io/badge/powered%20by-arwes-02b2d4.svg" alt="arwes" />
+<img src="https://img.shields.io/badge/powered%20by-arwes-02b2d4.svg" alt="arwes" />
 </a>
 
-Alternative Rock injected with electronic and cinematic elements.
-Proud member of the [FiXT](https://www.fixtonline.com) roster.
-
-Check the music out at **[Spotify](https://open.spotify.com/artist/1cEPAqNFhmARDe0HgKOD3h)**.
+**[firmanjabar.my.id](https://firmanjabar.my.id)**
 
 The website was powered by the **[Arwes](https://arwes.dev)** project.
 
@@ -37,6 +30,7 @@ The website was powered by the **[Arwes](https://arwes.dev)** project.
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors)
