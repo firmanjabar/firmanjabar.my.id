@@ -40,14 +40,14 @@ class Component extends React.Component {
       <p className={cx(classes.root, className)} {...etc}>
         <Link
           className={classes.link}
-          href="https://github.com/soulextract/soulextract.com"
+          href="https://github.com/arwes/arwes"
           target="github"
           onMouseEnter={() => sounds.hover.play()}
           onLinkStart={onLinkStart}
           onLinkEnd={onLinkEnd}
         >
           <Text animation={{ animate, show, duration }} stableTime>
-            — Template from SoulExtract.com —
+            — powered by arwes —
           </Text>
         </Link>
       </p>
