@@ -14,4 +14,10 @@ module.exports = [
     message: `⚽ - [Dicoding] Membangun Progressive Web App. Ruang bola adalah progressive web apps yang menampilkan klasemen, team, pertandingan, dan masih banyak lagi dari 12 liga yang paling populer di dunia.`,
     link: 'https://ruangbola.firmanjabar.my.id',
   },
+  {
+    title: "HTML-Dasar",
+    image: 'https://pbs.twimg.com/media/FLOaZSkagAAyQCz?format=png&name=large',
+    message: `👨‍🎓 - [Skripsi] Media Pembelajaran Interaktif Berbasis Web Berbantuan Teknologi Progressive Web Application (PWA) pada Materi HTML Dasar dengan Metode Tutorial \n username: a1c615039 \n password: lala \n\n laman guru: https://skripsi.firmanjabar.my.id/guru`,
+    link: 'https://skripsi.firmanjabar.my.id',
+  },
 ];
