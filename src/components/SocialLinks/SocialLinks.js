@@ -115,13 +115,13 @@ class Component extends React.PureComponent {
         <A href="https://github.com/firmanjabar" title="Github" target="github">
           <span className="mdi mdi-github-circle" />
         </A>
-        <A
+        {/* <A
           href="https://www.facebook.com/firmanabduljabar"
           title="Facebook"
           target="facebook"
         >
           <span className="mdi mdi-facebook" />
-        </A>
+        </A> */}
         <A
           href="https://www.instagram.com/firmanjabar"
           title="Instagram"

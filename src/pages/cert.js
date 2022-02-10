@@ -117,14 +117,14 @@ class Blogs extends React.Component {
       <Main className={classes.root}>
         <Secuence stagger>
           <h1>
-            <Text>Blogs</Text>
+            <Text>Certificate</Text>
           </h1>
           <hr />
           <div className={classes.albums}>
             {dataBlog.map((post, index) => (
               <div key={index} className={classes.album}>
                 <Fader className={classes.albumCover}>
-                  <Link href={post.href} className={classes.link}>
+                  <Link href={post.href} target="_blank" className={classes.link}>
                     <img alt={post.title} src={post.image} />
                     <div className={classes.wrapper}>
                       <div className={classes.title}>

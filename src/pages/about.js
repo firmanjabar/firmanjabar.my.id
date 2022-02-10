@@ -29,15 +29,14 @@ class About extends React.Component {
                 <Text>About Me</Text>
               </h1>
             </header>
-            <p>
-              <Text>Firman Abdul Jabar</Text>
-            </p>
-            <Fader>
-              <img src='https://i.ibb.co/V2sQzn8/firmancircle2.png' alt='Firman Abdul Jabar' />
-            </Fader>
-            <p>
-              <Text>Firman Abdul Jabar</Text>
-            </p>
+            <center>
+              <Fader>
+                <img width="250px" src='https://i.ibb.co/V2sQzn8/firmancircle2.png' alt='Firman Abdul Jabar' />
+              </Fader>
+              <p>
+                Hi There, my name is <b>Firman Abdul Jabar</b> — I wanna be a [Fullstack] Web Developer. Wish me luck! ✌️
+              </p>
+            </center>
           </Secuence>
         </article>
       </Main>

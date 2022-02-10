@@ -66,12 +66,13 @@ const styles = (theme) => ({
 
   '@media screen and (min-width: 768px)': {
     link: {
+      flexDirection:'row',
       padding: 20,
     },
     media: {
-      padding: [0, 0, 20, 0],
-      width: '100%',
-      height: 380,
+      padding: [0, 20, 0, 0],
+      width: '50%',
+      height: 300,
     },
   },
 });

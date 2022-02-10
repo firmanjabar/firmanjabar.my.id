@@ -48,14 +48,14 @@ const styles = theme => ({
     },
     menu: {
       margin: 0,
-      maxWidth: 375
+      maxWidth: 400
     }
   },
 
   '@media screen and (min-width: 1025px)': {
     menu: {
       margin: 0,
-      width: 420,
+      width: 500,
       maxWidth: 'none'
     }
   }

@@ -29,7 +29,7 @@ class Project extends React.Component {
         <Secuence stagger>
           <header>
             <h1>
-              <Text>Projects</Text>
+              <Text>Portfolio</Text>
             </h1>
           </header>
           {dataProject.map((post, index) => (

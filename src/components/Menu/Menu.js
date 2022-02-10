@@ -195,21 +195,21 @@ class Component extends React.PureComponent {
             </Text>
           </Link>
           <b className={cx(classes.item, classes.divisor)}>|</b>
-          <Link href="/project" {...linkProps}>
+          <Link href="/portfolio" {...linkProps}>
             <Text
               animation={{ animate: animateText }}
               audio={{ silent: !animateText }}
             >
-              Project
+              Portfolio
             </Text>
           </Link>
           <b className={cx(classes.item, classes.divisor)}>|</b>
-          <Link href="/blog" {...linkProps}>
+          <Link href="/cert" {...linkProps}>
             <Text
               animation={{ animate: animateText }}
               audio={{ silent: !animateText }}
             >
-              Blog
+              Certificate
             </Text>
           </Link>
           <b className={cx(classes.item, classes.divisor)}>|</b>
