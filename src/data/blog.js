@@ -3,6 +3,14 @@
 
 module.exports = [
   {
+    id: '5',
+    image: 'https://pbs.twimg.com/media/FPeSiE0VQAYXyQX?format=jpg&name=large',
+    href: 'https://pbs.twimg.com/media/FPeSiE0VQAYXyQX?format=jpg&name=large',
+    title: 'Hackathon in BCA',
+    date: 'March 30th, 2022',
+    desc: `Valid until: -`,
+  },
+  {
     id: '0',
     image: 'https://pbs.twimg.com/media/EfjIwdIUMAA2Ejo?format=png&name=900x900',
     href: 'https://www.dicoding.com/certificates/453XE68O0XRN',

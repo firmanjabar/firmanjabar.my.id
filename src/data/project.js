@@ -3,6 +3,12 @@
 
 module.exports = [
   {
+    title: "Merch BCA",
+    image: 'https://pbs.twimg.com/media/FPeRORmVUAUxN1J?format=jpg&name=large',
+    message: `👔 - [Hackathon in BCA (HAI BCA)] Merch BCA dirancang oleh HAI MP 26 yang terdiri dari Firman Abdul Jabar sebagai Project Manager (Ketua), Felix Setiawan, dan Fariz Prasetya Putra sebagai anggota. Aplikasi berbasis web Merch BCA dibangun menggunakan teknologi Springboot, Spring dataJPA, Spring Security, Thymeleaf, MySQL, Lombok, WebJars, Ultraq Thymeleaf, DataTable, OpenWeathermap API, HTML, CSS, JavaScript, dan Bootstrap (Neftify Template)`,
+    link: 'https://merch-bca.herokuapp.com/',
+  },
+  {
     title: "Nongki's",
     image: 'https://i.ibb.co/XYt7yML/image.png',
     message: `🍟 - [Dicoding] Menjadi Front-End Web Developer Expert. Build with: Webpack, Workbox, PWA, IndexedDB, HTML, CSS and JS. Testing: Jasmine, Karma, Codecept, Puppeteer. Code Convention: AirBnb JavaScript Style Guide \n\n tags: Workbox PWA Webpack MFWDE Dicoding IndexedDB`,
