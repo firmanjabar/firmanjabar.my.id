@@ -3,6 +3,18 @@
 
 module.exports = [
   {
+    title: "IJACEA",
+    image: 'https://pbs.twimg.com/media/FUjJyuGVEAAyinm?format=jpg&name=large',
+    message: `🆔🗾 - [Freelance] Converting from desain or static HTML into Wordpress, Styling and Fixing bugs in general, Adding pages news for the website, Adding pages section on main page, etc.`,
+    link: 'https://www.missao.co.jp/',
+  },
+  {
+    title: "Missao Corporation",
+    image: 'https://pbs.twimg.com/media/FUjKZw-VUAE9cM5?format=jpg&name=large',
+    message: `🗾 - [Freelance] Styling and Fixing bugs in general, Adding scroll icon on main page, Adding latest news for the website, etc.`,
+    link: 'https://www.missao.co.jp/',
+  },
+  {
     title: "Merch BCA",
     image: 'https://pbs.twimg.com/media/FPeRORmVUAUxN1J?format=jpg&name=large',
     message: `👔 - [Hackathon in BCA (HAI BCA)] Merch BCA dirancang oleh HAI MP 26 yang terdiri dari Firman Abdul Jabar sebagai Project Manager (Ketua), Felix Setiawan, dan Fariz Prasetya Putra sebagai anggota. Aplikasi berbasis web Merch BCA dibangun menggunakan teknologi Springboot, Spring dataJPA, Spring Security, Thymeleaf, MySQL, Lombok, WebJars, Ultraq Thymeleaf, DataTable, OpenWeathermap API, HTML, CSS, JavaScript, dan Bootstrap (Neftify Template)`,
