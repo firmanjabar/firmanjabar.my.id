@@ -6,7 +6,7 @@ module.exports = [
     title: "IJACEA",
     image: 'https://pbs.twimg.com/media/FUjJyuGVEAAyinm?format=jpg&name=large',
     message: `🆔🗾 - [Freelance] Converting from desain or static HTML into Wordpress, Styling and Fixing bugs in general, Adding pages news for the website, Adding pages section on main page, etc.`,
-    link: 'https://www.missao.co.jp/',
+    link: 'https://www.ijacea.org/',
   },
   {
     title: "Missao Corporation",
